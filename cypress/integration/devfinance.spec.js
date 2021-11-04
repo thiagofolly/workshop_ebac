@@ -23,6 +23,14 @@ describe("DevFinance", () => {
 
     cy.get("table tbody tr").should("have.length", 2);
 
+    cy.get("a[onclick*=open]").click();
+    cy.get("#description").type("Teste");
+    cy.get("#amount").type("300");
+    cy.get("#date").type("2021-11-03");
+    cy.contains("button", "Salvar").click();
+
+    cy.get("table tbody tr").should("have.length", 3);
+
     cy.get("table tbody tr").eq(1).find("img[onclick*=remove]").click();
   });
 });
