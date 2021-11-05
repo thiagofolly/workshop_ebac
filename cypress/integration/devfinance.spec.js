@@ -4,7 +4,7 @@
 // contains - mapear elemento usando texto
 
 describe("DevFinance", () => {
-  it.only("Adicionar duas novas transações e excluir a segunda", () => {
+  it.only("Adicionar três novas transações e excluir a segunda", () => {
     cy.visit("https://devfinance-agilizei.netlify.app/#");
 
     cy.get("a[onclick*=open]").click();
